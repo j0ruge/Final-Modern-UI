@@ -42,16 +42,16 @@
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btnMinimize = new FontAwesome.Sharp.IconButton();
-            this.btnMaximize = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.btnMinimizeWindow = new FontAwesome.Sharp.IconButton();
+            this.btnMaximizeWindow = new FontAwesome.Sharp.IconButton();
+            this.btnCloseWindow = new FontAwesome.Sharp.IconButton();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.rjDropdownMenu1 = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.item1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.item2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.item3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.item11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.item22ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.item2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.item3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -256,15 +256,14 @@
             this.pictureBox1.Size = new System.Drawing.Size(79, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.TabStop = false;            
             // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.White;
-            this.panelTitleBar.Controls.Add(this.btnMinimize);
-            this.panelTitleBar.Controls.Add(this.btnMaximize);
-            this.panelTitleBar.Controls.Add(this.btnClose);
+            this.panelTitleBar.Controls.Add(this.btnMinimizeWindow);
+            this.panelTitleBar.Controls.Add(this.btnMaximizeWindow);
+            this.panelTitleBar.Controls.Add(this.btnCloseWindow);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(230, 0);
             this.panelTitleBar.Name = "panelTitleBar";
@@ -272,56 +271,56 @@
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
-            // btnMinimize
+            // btnMinimizeWindow
             // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.btnMinimize.IconColor = System.Drawing.Color.White;
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(544, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
-            this.btnMinimize.TabIndex = 4;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimizeWindow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizeWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnMinimizeWindow.FlatAppearance.BorderSize = 0;
+            this.btnMinimizeWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizeWindow.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.btnMinimizeWindow.IconColor = System.Drawing.Color.White;
+            this.btnMinimizeWindow.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimizeWindow.IconSize = 20;
+            this.btnMinimizeWindow.Location = new System.Drawing.Point(544, 0);
+            this.btnMinimizeWindow.Name = "btnMinimizeWindow";
+            this.btnMinimizeWindow.Size = new System.Drawing.Size(45, 25);
+            this.btnMinimizeWindow.TabIndex = 4;
+            this.btnMinimizeWindow.UseVisualStyleBackColor = false;
+            this.btnMinimizeWindow.Click += new System.EventHandler(this.btnMinimizeWindows_Click);
             // 
-            // btnMaximize
+            // btnMaximizeWindow
             // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.btnMaximize.IconColor = System.Drawing.Color.White;
-            this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(589, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(45, 25);
-            this.btnMaximize.TabIndex = 3;
-            this.btnMaximize.UseVisualStyleBackColor = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            this.btnMaximizeWindow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizeWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnMaximizeWindow.FlatAppearance.BorderSize = 0;
+            this.btnMaximizeWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizeWindow.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.btnMaximizeWindow.IconColor = System.Drawing.Color.White;
+            this.btnMaximizeWindow.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaximizeWindow.IconSize = 20;
+            this.btnMaximizeWindow.Location = new System.Drawing.Point(589, 0);
+            this.btnMaximizeWindow.Name = "btnMaximizeWindow";
+            this.btnMaximizeWindow.Size = new System.Drawing.Size(45, 25);
+            this.btnMaximizeWindow.TabIndex = 3;
+            this.btnMaximizeWindow.UseVisualStyleBackColor = false;
+            this.btnMaximizeWindow.Click += new System.EventHandler(this.btnMaximizeWindow_Click);
             // 
-            // btnClose
+            // btnCloseWindow
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(130)))));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(634, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 25);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnCloseWindow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(74)))), ((int)(((byte)(130)))));
+            this.btnCloseWindow.FlatAppearance.BorderSize = 0;
+            this.btnCloseWindow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseWindow.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.btnCloseWindow.IconColor = System.Drawing.Color.White;
+            this.btnCloseWindow.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCloseWindow.IconSize = 20;
+            this.btnCloseWindow.Location = new System.Drawing.Point(634, 0);
+            this.btnCloseWindow.Name = "btnCloseWindow";
+            this.btnCloseWindow.Size = new System.Drawing.Size(45, 25);
+            this.btnCloseWindow.TabIndex = 2;
+            this.btnCloseWindow.UseVisualStyleBackColor = false;
+            this.btnCloseWindow.Click += new System.EventHandler(this.btnCloseWindow_Click);
             // 
             // panelDesktop
             // 
@@ -343,7 +342,7 @@
             this.rjDropdownMenu1.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenu1.Name = "rjDropdownMenu1";
             this.rjDropdownMenu1.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.rjDropdownMenu1.Size = new System.Drawing.Size(181, 92);
+            this.rjDropdownMenu1.Size = new System.Drawing.Size(108, 70);
             this.rjDropdownMenu1.Opening += new System.ComponentModel.CancelEventHandler(this.rjDropdownMenu1_Opening);
             // 
             // item1ToolStripMenuItem
@@ -352,32 +351,32 @@
             this.item11ToolStripMenuItem,
             this.item22ToolStripMenuItem});
             this.item1ToolStripMenuItem.Name = "item1ToolStripMenuItem";
-            this.item1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.item1ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.item1ToolStripMenuItem.Text = "Item 1";
-            // 
-            // item2ToolStripMenuItem
-            // 
-            this.item2ToolStripMenuItem.Name = "item2ToolStripMenuItem";
-            this.item2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.item2ToolStripMenuItem.Text = "Item 2";
-            // 
-            // item3ToolStripMenuItem
-            // 
-            this.item3ToolStripMenuItem.Name = "item3ToolStripMenuItem";
-            this.item3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.item3ToolStripMenuItem.Text = "Item 3";
             // 
             // item11ToolStripMenuItem
             // 
             this.item11ToolStripMenuItem.Name = "item11ToolStripMenuItem";
-            this.item11ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.item11ToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.item11ToolStripMenuItem.Text = "Item 1.1";
             // 
             // item22ToolStripMenuItem
             // 
             this.item22ToolStripMenuItem.Name = "item22ToolStripMenuItem";
-            this.item22ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.item22ToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.item22ToolStripMenuItem.Text = "Item 2.2";
+            // 
+            // item2ToolStripMenuItem
+            // 
+            this.item2ToolStripMenuItem.Name = "item2ToolStripMenuItem";
+            this.item2ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.item2ToolStripMenuItem.Text = "Item 2";
+            // 
+            // item3ToolStripMenuItem
+            // 
+            this.item3ToolStripMenuItem.Name = "item3ToolStripMenuItem";
+            this.item3ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.item3ToolStripMenuItem.Text = "Item 3";
             // 
             // Form1
             // 
@@ -414,9 +413,9 @@
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton btnMinimize;
-        private FontAwesome.Sharp.IconButton btnMaximize;
-        private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconButton btnMinimizeWindow;
+        private FontAwesome.Sharp.IconButton btnMaximizeWindow;
+        private FontAwesome.Sharp.IconButton btnCloseWindow;
         private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenu1;
         private System.Windows.Forms.ToolStripMenuItem item1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem item11ToolStripMenuItem;

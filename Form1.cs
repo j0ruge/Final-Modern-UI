@@ -39,6 +39,7 @@ namespace Final_Modern_UI
         #region => DragForm
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
@@ -191,12 +192,12 @@ namespace Final_Modern_UI
             AdjustForm();
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void btnMinimizeWindows_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
+        } 
 
-        private void btnMaximize_Click(object sender, EventArgs e)
+        private void btnMaximizeWindow_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Normal)
             {
@@ -210,7 +211,7 @@ namespace Final_Modern_UI
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnCloseWindow_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -221,12 +222,6 @@ namespace Final_Modern_UI
         }
         #endregion => WindowsProcessEventMethods
         #endregion => WindowsProcess
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void rjDropdownMenu1_Opening(object sender, CancelEventArgs e)
         {
