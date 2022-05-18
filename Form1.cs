@@ -50,7 +50,6 @@ namespace Final_Modern_UI
         }
         #endregion => DragForm
 
-
         #region => WindowsProcess
         //Overridden methods
         protected override void WndProc(ref Message message)
