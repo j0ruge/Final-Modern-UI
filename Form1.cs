@@ -27,6 +27,10 @@ namespace Final_Modern_UI
         {
             this.Padding = new Padding(borderSize); //Border size
             this.BackColor = Color.FromArgb(98,102,244);  //Border color
+
+            var designSize = this.ClientSize;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.Size = designSize;
         }
       
         public Form1()
@@ -58,8 +62,19 @@ namespace Final_Modern_UI
         }
         #endregion => DragForm
 
-        #region => WindowsProcess
-        //Overridden methods
+        #region => WindowsProcess v0
+        //protected override void WndProc(ref Message message)
+        //{
+        //    const int WM_NCCALCSIZE = 0x0083;
+        //    if (message.Msg == WM_NCCALCSIZE && message.WParam.ToInt32() == 1)
+        //    {
+        //        return;
+        //    }
+        //    base.WndProc(ref message);
+        //}
+        #endregion => WindowsProcess v0 
+
+        #region => WindowsProcess        
         protected override void WndProc(ref Message message)
         {
             const int WM_NCCALCSIZE = 0x0083;//Standar Title Bar - Snap Window
@@ -148,6 +163,7 @@ namespace Final_Modern_UI
             }
             base.WndProc(ref message);
         }
+        #endregion => WindowsProcess
 
         #region => WindowsProcessPrivateMethods   
 
@@ -217,7 +233,7 @@ namespace Final_Modern_UI
         private void btnMinimizeWindows_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        } 
+        }
 
         private void btnMaximizeWindow_Click(object sender, EventArgs e)
         {
@@ -243,7 +259,6 @@ namespace Final_Modern_UI
             CollapseMenu();
         }
         #endregion => WindowsProcessEventMethods
-        #endregion => WindowsProcess
 
         private void rjDropdownMenu1_Opening(object sender, CancelEventArgs e)
         {
