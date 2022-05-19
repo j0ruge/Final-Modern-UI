@@ -43,10 +43,18 @@ namespace Final_Modern_UI
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs mouseEventArgs)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            if(mouseEventArgs.Button == MouseButtons.Left && mouseEventArgs.Clicks >= 2)
+            {
+                MaximizeOnClick(sender, mouseEventArgs);
+                return;
+            }    
+            if(mouseEventArgs.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }            
         }
         #endregion => DragForm
 
@@ -141,7 +149,22 @@ namespace Final_Modern_UI
             base.WndProc(ref message);
         }
 
-        #region => WindowsProcessPrivateMethods        
+        #region => WindowsProcessPrivateMethods   
+
+        private void MaximizeOnClick(object sender, EventArgs eventArgs)
+        {
+            if (FormWindowState.Normal == WindowState)
+            {
+                MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                MaximumSize = new Size(0, 0);
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
         private void AdjustForm()
         {
             switch (this.WindowState)
